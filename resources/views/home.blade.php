@@ -231,14 +231,14 @@
                             <img src="{{asset('assets/images/job.png')}}" />
                         </div>
                         <div class="job-post-details mr-3 ml-3 p-3 my-auto">
-                            <h1>Post your job</h1>
+                            <h1>Publikasikan pekerjaan anda</h1>
                             <p>
-                                Job seekers looking for quality job always. <br /> Post your job to get the talents
+                                Rektruter selalu mencari pekerja yang berkualitas. <br /> Publikasikan pekerjaan anda agar diposisikan dengan orang berbakat.
                             </p>
                         </div>
 
                         <div class="job-post-button my-auto">
-                            <a href="{{route('post_new_job')}}" class="btn btn-primary btn-lg">Post a Job</a>
+                            <a href="{{route('post_new_job')}}" class="btn btn-primary btn-lg">Publikasikan pekerjaan</a>
 
                         </div>
                     </div>
@@ -254,30 +254,28 @@
 
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="text-muted mb-3">Our website stats</h2>
-                    <p class="text-muted mb-4">Here the stats of how many people we've helped them to find jobs, hired talents</p>
-
+                    <h2 class="text-muted mb-5">Statistik Website</h2>
                 </div>
             </div>
 
 
             <div class="row">
                 <div class="col-md-3">
-                    <h3>15M</h3>
-                    <h5>Job Applicants</h5>
+                    <h3>{{$counts->usersCount}}</h3>
+                    <h5>Pelamar</h5>
                 </div>
 
                 <div class="col-md-3">
-                    <h3>12M</h3>
-                    <h5>Job Posted</h5>
+                    <h3>{{$counts->totalJobs}}</h3>
+                    <h5>Pekerjaan</h5>
                 </div>
                 <div class="col-md-3">
-                    <h3>8M</h3>
-                    <h5>Employers</h5>
+                    <h3>{{$counts->employerCount}}</h3>
+                    <h5>Perusahaan</h5>
                 </div>
                 <div class="col-md-3">
-                    <h3>15M</h3>
-                    <h5>Recruiters</h5>
+                    <h3>{{$counts->agentCount}}</h3>
+                    <h5>Rekruter</h5>
                 </div>
             </div>
         </div>

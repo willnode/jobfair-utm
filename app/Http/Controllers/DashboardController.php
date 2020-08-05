@@ -14,13 +14,11 @@ class DashboardController extends Controller
 
         $data = [
             'usersCount' => User::count(),
-            'totalPayments' => Payment::success()->sum('amount'),
             'activeJobs' => Job::active()->count(),
             'totalJobs' => Job::count(),
             'employerCount' => User::employer()->count(),
             'agentCount' => User::agent()->count(),
             'totalApplicants' => JobApplication::count(),
-
         ];
 
 

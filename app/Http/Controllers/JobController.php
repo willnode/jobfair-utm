@@ -301,7 +301,7 @@ class JobController extends Controller
     public function jobApplicants($job_id){
         $job = Job::find($job_id);
 
-        $title = __('app.applicants')." For ({$job->job_title})";
+        $title = __('app.applicants')." untuk ({$job->job_title})";
         $applications = JobApplication::whereJobId($job_id)->orderBy('id', 'desc')->paginate(20);
 
         return view('admin.applicants', compact('title', 'applications'));

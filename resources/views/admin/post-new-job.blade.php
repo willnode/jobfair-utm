@@ -321,28 +321,6 @@
                     </div>
                 </div>
 
-
-                <div class="alert alert-warning">
-
-                    <legend>@lang('app.premium_job')</legend>
-
-                    <div class="form-group row {{ $errors->has('is_premium')? 'has-error':'' }}">
-                        <label for="is_premium" class="col-md-4 control-label">{{ __('app.is_premium') }} </label>
-                        <div class="col-md-8">
-                            @php
-                                $employer = auth()->user();
-                            @endphp
-
-                            @if($employer->premium_jobs_balance)
-                                <label> <input type="checkbox" name="is_premium" value="1" {{checked('1', old('is_premium'))}} > @lang('app.location_anywhere') </label>
-                            @else
-                                <a href="{{route('pricing')}}" target="_blank">You don't have any premium jobs balance to add premium jobs, please purchase a package to earn ability of posting premium jobs</a>
-                            @endif
-                        </div>
-                    </div>
-
-                </div>
-
                 <div class="form-group row">
                     <label class="col-sm-4"></label>
                     <div class="col-sm-8">

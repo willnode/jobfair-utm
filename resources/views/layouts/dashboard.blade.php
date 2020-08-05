@@ -38,7 +38,7 @@ $user = Auth::user();
 @endphp
 
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+        <nav class="navbar navbar-expand-md bg-info navbar-light navbar-laravel">
             <div class="container-fluid">
                 <a class="navbar-brand" href="{{ route('dashboard') }}">
                     <img src="{{asset('assets/images/logo.png')}}" />
@@ -57,7 +57,7 @@ $user = Auth::user();
                     <ul class="navbar-nav ml-auto">
 
                         <li class="nav-item">
-                            <a class="nav-link btn btn-primary text-white" href="{{route('post_new_job')}}"><i class="la la-save"></i>{{__('app.post_new_job')}} </a>
+                            <a class="nav-link btn btn-success text-white" href="{{route('post_new_job')}}"><i class="la la-save"></i>{{__('app.post_new_job')}} </a>
                         </li>
 
                         <li class="nav-item dropdown">
@@ -186,8 +186,6 @@ $user = Auth::user();
 
                                 <ul class="dropdown-menu" style="display: none;">
                                     <li><a class="sidebar-link" href="{{route('general_settings')}}">@lang('app.general_settings')</a></li>
-                                    <li><a class="sidebar-link" href="{{route('pricing_settings')}}">@lang('app.pricing')</a></li>
-                                    <li><a class="sidebar-link" href="{{route('gateways_settings')}}">@lang('app.gateways')</a></li>
                                 </ul>
                             </li>
 

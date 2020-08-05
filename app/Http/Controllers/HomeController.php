@@ -8,6 +8,7 @@ use App\Mail\ContactUs;
 use App\Mail\ContactUsSendToSender;
 use App\Post;
 use App\Pricing;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Mail;
@@ -34,7 +35,13 @@ class HomeController extends Controller
         $regular_jobs = Job::active()->orderBy('id', 'desc')->with('employer')->take(15)->get();
         $blog_posts = Post::whereType('post')->with('author')->orderBy('id', 'desc')->take(3)->get();
         $packages = Pricing::all();
-        return view('home', compact('categories', 'premium_jobs','regular_jobs','packages', 'blog_posts'));
+        $counts = (object)[
+            'usersCount' => User::count(),
+            'totalJobs' => Job::count(),
+            'employerCount' => User::employer()->count(),
+            'agentCount' => User::agent()->count(),
+        ];
+        return view('home', compact('categories', 'premium_jobs','regular_jobs','packages', 'blog_posts', 'counts'));
     }
 
     public function newRegister(){

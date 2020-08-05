@@ -267,7 +267,6 @@
 
                             <i class="la la-male"></i>
                             <i class="la la-female"></i>
-                            <i class="la la-transgender"></i>
                             <span class="text-muted">(@lang('app.'.$job->gender))</span>
                         @else
                             <i class="la la-{{$job->gender}}"></i> @lang('app.only') @lang('app.'.$job->gender)
