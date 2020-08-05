@@ -8,7 +8,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 offset-md-2 text-center">
-                        <h1>{!! get_option('site_name') !!} @lang('app.blog')</h1>
+                        <h1>{!! get_option('site_name') !!}</h1>
                         <p>Dapatkan pembaruan terbaru dari {!! get_option('site_name') !!}</p>
 
                         <div class="blog-search-wrap py-3">

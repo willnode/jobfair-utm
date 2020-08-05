@@ -223,6 +223,7 @@ return [
     'company_name'                      => 'Nama Instansi',
     'apply_to_this_job'                 => 'Lamar pekerjaan ini',
     'apply_online'                      => 'Lamar secara online',
+    'apply_disabled'                      => 'Job Fair Belum Dibuka',
     'online_job_application_form'       => 'Form Aplikasi Pekerjaan secara online',
     'position_applied'                  => 'Posisi diaplikasikan',
     'your_name'                         => 'Nama anda',

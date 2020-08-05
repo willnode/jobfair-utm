@@ -12,13 +12,12 @@
                 <div class="row">
                     <div class="col-md-8">
                         <h1>Temukan pekerjaan terbaik untuk anda</h1>
-                        <p class="mt-4 mb-4 job-search-sub-text">Kami sediakan beragan jenis pekerjaan dari beragam instansi dan organisasi untuk menunjang masa depan karir anda</p>
+                        <p class="mt-4 mb-4 job-search-sub-text">Dipersembahkan oleh Pusat Pengembangan Karir Universitas Trunojoyo Madura</p>
                     </div>
                 </div>
-
+                @if(get_option('fair_open') == '1')
                 <div class="row ">
                     <div class="col-md-12">
-
                         <form action="{{route('jobs_listing')}}" class="form-inline" method="get">
                             <div class="form-row">
                                 <div class="col-auto">
@@ -28,10 +27,11 @@
                                 </div>
                             </div>
                         </form>
-
                     </div>
-
                 </div>
+                @else
+                <p><i>Job Fair sedang ditutup</i></p>
+                @endif
             </div>
 
         </div>
@@ -67,6 +67,20 @@
         </div>
     @endif
 
+    <div class="home-categories-wrap pb-5 pt-5">
+        <div class="container align-items-center">
+            <div class="row">
+                <div class="col-md-6 d-flex align-items-center">
+                    <h1>Status Job Fair</h1>
+                </div>
+                
+                <div class="col-md-6">
+                    <h2 class="mb-3 {{ get_option('fair_open') == '1' ? 'bg-success' : 'bg-warning'}} p-2">{{ get_option('fair_open') == '1' ? 'Sudah Dibuka' : 'Sedang Ditutup'}}</h2>
+                    <h5 class="text-muted">Jangka pembukaan {{ get_option('fair_start') }} s/d {{ get_option('fair_end') }}</h5>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="new-registration-page bg-white pb-5 pt-5">
         <div class="container">
@@ -163,8 +177,8 @@
                 <div class="col-md-12">
 
                     <div class="pricing-section-heading mb-5 text-center">
-                        <h1>From Our Blog</h1>
-                        <h5 class="text-muted">Check the latest updates/news from us.</h5>
+                        <h1>Dari Blog Kami</h1>
+                        <h5 class="text-muted">Cek update terakhir dari kami.</h5>
                     </div>
 
                 </div>

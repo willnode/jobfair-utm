@@ -127,7 +127,7 @@
                     <div class="form-group row {{ $errors->has('fair_start')? 'has-error':'' }}">
                         <label for="fair_start" class="col-sm-4 control-label"> @lang('app.fair_start')</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control {{e_form_invalid_class('fair_start', $errors)}} date_picker" id="fair_start" value="{{ old('fair_start') }}" name="fair_start" placeholder="@lang('app.fair_start')">
+                            <input type="text" class="form-control {{e_form_invalid_class('fair_start', $errors)}} date_picker" id="fair_start" value="{{ old('fair_start')? old('fair_start') : get_option('fair_start') }}" name="fair_start" placeholder="@lang('app.fair_start')">
 
                             {!! e_form_error('fair_start', $errors) !!}
                         </div>
@@ -140,10 +140,10 @@
                         
                         <div class="form-group row">
                             <div class="col-md-6">
-                                <input type="text" class="form-control {{e_form_invalid_class('fair_end', $errors)}} date_picker" id="fair_end" value="{{ old('fair_end') }}" name="fair_end" placeholder="@lang('app.fair_end')">
+                                <input type="text" class="form-control {{e_form_invalid_class('fair_end', $errors)}} date_picker" id="fair_end" value="{{ old('fair_end')? old('fair_end') : get_option('fair_end') }}" name="fair_end" placeholder="@lang('app.fair_end')">
                             </div>
                             <div class="col-md-6">
-                                <label> <input type="checkbox" name="fair_open" value="1" {{checked('1', old('fair_open'))}} > @lang('app.fair_open')</label>
+                                <label> <input type="checkbox" name="fair_open" value="1" {{checked('1', old('fair_open') ? old('fair_open') : get_option('fair_open'))}} > @lang('app.fair_open')</label>
                             </div>
                         </div>
 

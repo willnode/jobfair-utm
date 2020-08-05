@@ -117,7 +117,7 @@
 
                     <div class="footer-logo-wrap mb-3">
                         <a class="navbar-brand" href="{{ url('/') }}">
-                            <img src="{{asset('assets/images/logo-alt.png')}}" />
+                            <img src="{{asset('assets/images/logo.png')}}" />
                         </a>
                     </div>
 

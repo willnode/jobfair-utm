@@ -195,7 +195,7 @@
 
 
                     <div class="terms-msg mt-5 mb-3">
-                        <p class="text-small text-muted font-italic">By applying to a job using {{get_option('site_name')}} you are agreeing to comply with and be subject to the {{get_option('site_name')}}  <a href="">Terms and Conditions</a> for use of our website. To use our website, you must agree with the <a href="">Terms and Conditions</a> and both meet and comply with their provisions.
+                        <p class="text-small text-muted font-italic">Dengan melamar pekerjaan menggunakan {{get_option('site_name')}} berarti anda setuju dan bertanggung jawab pada  <a href="">Syarat dan Ketentuan</a> {{get_option('site_name')}}.
                         </p>
                     </div>
 
@@ -285,7 +285,9 @@
                     <p><i class="la la-tag"></i> @lang('app.job_id') : {{$job->job_id}}</p>
 
                     <p>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#applyJobModal"><i class="la la-calendar-plus-o"></i> @lang('app.apply_online') </button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#applyJobModal" {{ get_option('fair_open') == '1' ? '' : 'disabled' }} >
+                            <i class="la la-calendar-plus-o"></i> {{ get_option('fair_open') == '1' ? __('app.apply_online') : __('app.apply_disabled') }}
+                        </button>
                     </p>
 
                 </div>

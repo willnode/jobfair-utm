@@ -60,7 +60,7 @@
                     <div class="col-md-12">
                         <div class="no data-wrap py-5 my-5 text-center">
                             <h1 class="display-1"><i class="la la-frown-o"></i> </h1>
-                            <h1>No Data available here</h1>
+                            <h1>Tidak ada data disini</h1>
                         </div>
                     </div>
                 </div>
