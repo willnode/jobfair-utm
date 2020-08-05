@@ -29,7 +29,7 @@
 </head>
 <body class="{{request()->routeIs('home') ? ' home ' : ''}} {{request()->routeIs('job_view') ? ' job-view-page ' : ''}}">
 <div id="app">
-    <nav class="navbar navbar-expand-md navbar-light navbar-laravel {{request()->routeIs('home') ? 'transparent-navbar' : ''}}">
+    <nav class="navbar navbar-expand-md navbar-dark {{request()->routeIs('home') ? '' : 'bg-primary'}} navbar-laravel {{request()->routeIs('home') ? 'transparent-navbar' : ''}}">
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
                 <img src="{{asset('assets/images/logo.png')}}" />
@@ -53,7 +53,6 @@
                     @endif
 
 
-                    <li class="nav-item"><a class="nav-link" href="{{route('pricing')}}"><i class="la la-dollar"></i> @lang('app.pricing')</a> </li>
                     <li class="nav-item"><a class="nav-link" href="{{route('jobs_listing')}}"><i class="la la-briefcase"></i> @lang('app.jobs')</a> </li>
                     <li class="nav-item"><a class="nav-link" href="{{route('blog_index')}}"><i class="la la-file-o"></i> @lang('app.blog')</a> </li>
                     <li class="nav-item"><a class="nav-link" href="{{route('contact_us')}}"><i class="la la-envelope-o"></i> @lang('app.contact_us')</a> </li>
@@ -63,7 +62,7 @@
                 <ul class="navbar-nav ml-auto">
 
                     <li class="nav-item">
-                        <a class="nav-link btn btn-success text-white" href="{{route('post_new_job')}}"><i class="la la-save"></i>{{__('app.post_new_job')}} </a>
+                        <a class="nav-link btn btn-primary text-white" href="{{route('post_new_job')}}"><i class="la la-save"></i>{{__('app.post_new_job')}} </a>
                     </li>
 
                     <!-- Authentication Links -->

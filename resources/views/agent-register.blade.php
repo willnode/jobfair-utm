@@ -142,7 +142,7 @@
                                 <label for="state" class="col-md-4 col-form-label text-md-right">{{ __('app.state') }} <span class="mendatory-mark">*</span></label>
                                 <div class="col-md-6">
                                     <select name="state" class="form-control state_options"  required autofocus>
-                                        <option value="">Select a state</option>
+                                        <option value="">Pilih Provinsi</option>
 
                                         @if($old_country)
                                             @foreach($old_country->states as $state)
@@ -175,7 +175,7 @@
 
                             <div class="form-group row mb-0">
                                 <div class="col-md-6 offset-md-4">
-                                    <button type="submit" class="btn btn-success">
+                                    <button type="submit" class="btn btn-primary">
                                         <i class="la la-save"></i> {{ __('Register') }}
                                     </button>
                                 </div>

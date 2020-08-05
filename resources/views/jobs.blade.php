@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="col-md-8 offset-md-2 text-center">
                     <h1>@lang('app.search_jobs')</h1>
-                    <h5>Filter from the left sidebar to find your desired job</h5>
+                    <h5>Saring pencarian dari panel kiri untuk menemukan pekerjaan yang anda inginkan</h5>
                 </div>
             </div>
         </div>
@@ -41,7 +41,6 @@
                                 <option value="any" {{ request('gender') == 'any' ? 'selected':'' }}>@lang('app.any')</option>
                                 <option value="male" {{ request('gender') == 'male' ? 'selected':'' }}>@lang('app.male')</option>
                                 <option value="female" {{ request('gender') == 'female' ? 'selected':'' }}>@lang('app.female')</option>
-                                <option value="transgender" {{ request('gender') == 'transgender' ? 'selected':'' }}>@lang('app.transgender')</option>
                             </select>
                         </div>
 
@@ -100,7 +99,7 @@
                             <p class="text-muted mb-1">@lang('app.state')</p>
 
                             <select name="state" class="form-control {{e_form_invalid_class('state', $errors)}} state_options">
-                                <option value="">Select a state</option>
+                                <option value="">Pilih Provinsi</option>
 
                                 @if($old_country)
                                     @foreach($old_country->states as $state)
@@ -116,7 +115,7 @@
                         </div>
 
                         <div class="form-group">
-                            <button type="submit" class="btn btn-success"><i class="la la-search"></i> @lang('app.filter_jobs')</button>
+                            <button type="submit" class="btn btn-primary"><i class="la la-search"></i> @lang('app.filter_jobs')</button>
                             <a href="{{route('jobs_listing')}}" class="btn btn-info text-white"><i class="la la-eraser"></i> @lang('app.clear_filter')</a>
                         </div>
                     </form>

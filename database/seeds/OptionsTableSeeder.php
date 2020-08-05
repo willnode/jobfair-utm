@@ -65,7 +65,7 @@ class OptionsTableSeeder extends Seeder
             10 => array (
                 'id' => 12,
                 'option_key' => 'site_title',
-                'option_value' => 'ThemeqxEstate',
+                'option_value' => 'Pusat Karir Trunojoyo',
             ),
             11 => array (
                 'id' => 13,
@@ -130,7 +130,7 @@ class OptionsTableSeeder extends Seeder
             23 => array (
                 'id' => 26,
                 'option_key' => 'site_name',
-                'option_value' => 'ThemeqxEstate',
+                'option_value' => 'Pusat Karir Trunojoyo',
             ),
             24 => array (
                 'id' => 27,

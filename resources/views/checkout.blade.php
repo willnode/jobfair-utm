@@ -29,7 +29,7 @@
                         <p>{{$user->name}}</p>
                         <h4>Package: {{$package->package_name}}</h4>
                         <p>@lang('app.premium_job') : {{$package->premium_job}}</p>
-                        <p class="text-success">@lang('app.price') : {!! get_amount($package->price) !!}</p>
+                        <p class="text-primary">@lang('app.price') : {!! get_amount($package->price) !!}</p>
 
 
                         <h4 class="my-5 text-muted">Choose your gateway</h4>
@@ -54,7 +54,7 @@
                             </div>
                         </div>
 
-                            <button class="btn btn-success btn-lg"><i class="la la-cart-arrow-down"></i> @lang('app.checkout')</button>
+                            <button class="btn btn-primary btn-lg"><i class="la la-cart-arrow-down"></i> @lang('app.checkout')</button>
 
 
                         </form>

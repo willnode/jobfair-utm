@@ -34,12 +34,12 @@
                                 <a href="{{route('edit_job', $job->id)}}" class="btn btn-secondary btn-sm"><i class="la la-edit" data-toggle="tooltip" title="@lang('app.edit')"></i> </a>
 
                                 @if(!$job->is_premium)
-                                    <a href="{{route('job_status_change', [$job->id, 'premium'])}}" class="btn btn-success btn-sm" data-toggle="tooltip" title="@lang('app.mark_premium')"><i class="la la-bookmark-o"></i> </a>
+                                    <a href="{{route('job_status_change', [$job->id, 'premium'])}}" class="btn btn-primary btn-sm" data-toggle="tooltip" title="@lang('app.mark_premium')"><i class="la la-bookmark-o"></i> </a>
                                 @endif
 
                                 @if(auth()->user()->is_admin())
                                     @if($job->status != 1)
-                                        <a href="{{route('job_status_change', [$job->id, 'approve'])}}" class="btn btn-success btn-sm" data-toggle="tooltip" title="@lang('app.approve')"><i class="la la-check-circle-o"></i> </a>
+                                        <a href="{{route('job_status_change', [$job->id, 'approve'])}}" class="btn btn-primary btn-sm" data-toggle="tooltip" title="@lang('app.approve')"><i class="la la-check-circle-o"></i> </a>
                                     @endif
 
                                     @if($job->status != 2)

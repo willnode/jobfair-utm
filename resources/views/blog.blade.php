@@ -9,12 +9,12 @@
                 <div class="row">
                     <div class="col-md-8 offset-md-2 text-center">
                         <h1>{!! get_option('site_name') !!} @lang('app.blog')</h1>
-                        <p>Get the latest updates from {!! get_option('site_name') !!}</p>
+                        <p>Dapatkan pembaruan terbaru dari {!! get_option('site_name') !!}</p>
 
                         <div class="blog-search-wrap py-3">
                             <form method="get" class="form-inline justify-content-center">
-                                <input type="text" name="q" value="{{request('q')}}" class="form-control mb-2" size="50" placeholder="Search blog">
-                                <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                                <input type="text" name="q" value="{{request('q')}}" class="form-control mb-2" size="50" placeholder="Cari blog">
+                                <button type="submit" class="btn btn-primary mb-2">Cari</button>
                             </form>
                         </div>
                     </div>
@@ -50,7 +50,7 @@
                                                 <span><i class="la la-eye"></i> {{$post->views}} </span>
                                             </div>
                                             <p class="blog-card-text-preview mb-2">{!! limit_words($post->post_content, 20) !!}</p>
-                                            <a href="{{route('blog_post_single', $post->slug)}}"> <i class="la la-book"></i> Read More</a>
+                                            <a href="{{route('blog_post_single', $post->slug)}}"> <i class="la la-book"></i> Baca lebih lanjut</a>
                                         </div>
                                     </div>
                                 </div>

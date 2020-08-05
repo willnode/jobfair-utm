@@ -50,12 +50,12 @@
 
                             <td>
                                 @if($payment->status == 'success')
-                                    <span class="text-success" data-toggle="tooltip" title="{{$payment->status}}"><i class="la la-check-circle-o"></i> </span>
+                                    <span class="text-primary" data-toggle="tooltip" title="{{$payment->status}}"><i class="la la-check-circle-o"></i> </span>
                                 @else
                                     <span class="text-danger" data-toggle="tooltip" title="{{$payment->status}}"><i class="la la-exclamation-circle"></i> </span>
                                 @endif
 
-                                <a href="{{route('payment_view', $payment->id)}}" class="btn btn-success ml-2"><i class="la la-eye"></i> </a>
+                                <a href="{{route('payment_view', $payment->id)}}" class="btn btn-primary ml-2"><i class="la la-eye"></i> </a>
                             </td>
 
                         </tr>

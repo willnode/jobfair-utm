@@ -11,8 +11,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8">
-                        <h1>Find the job that you deserve</h1>
-                        <p class="mt-4 mb-4 job-search-sub-text">More than 3000+ trusted live jobs available from 500+ different employer, <br /> and agents on this website to take your career next level</p>
+                        <h1>Temukan pekerjaan terbaik untuk anda</h1>
+                        <p class="mt-4 mb-4 job-search-sub-text">Kami sediakan beragan jenis pekerjaan dari beragam instansi dan organisasi untuk menunjang masa depan karir anda</p>
                     </div>
                 </div>
 
@@ -24,7 +24,7 @@
                                 <div class="col-auto">
                                     <input type="text" name="q" class="form-control mb-2" style="min-width: 300px;" placeholder="@lang('app.job_title_placeholder')">
                                     <input type="text" name="location" class="form-control" style="min-width: 300px;"  placeholder="@lang('app.job_location_placeholder')">
-                                    <button type="submit" class="btn btn-success mb-2"><i class="la la-search"></i> @lang('app.search') @lang('app.job')</button>
+                                    <button type="submit" class="btn btn-primary mb-2"><i class="la la-search"></i> @lang('app.search') @lang('app.job')</button>
                                 </div>
                             </div>
                         </form>
@@ -68,70 +68,6 @@
     @endif
 
 
-
-    @if($premium_jobs->count())
-        <div class="premium-jobs-wrap pb-5 pt-5">
-
-            <div class="container">
-
-                <div class="row">
-                    <div class="col-md-12">
-                        <h4 class="mb-3">@lang('app.premium_jobs')</h4>
-                    </div>
-                </div>
-
-                <div class="row">
-                    @foreach($premium_jobs as $job)
-                        <div class="col-md-4 mb-3">
-                            <div class="premium-job-box p-3 bg-white box-shadow">
-
-                                <div class="row">
-                                    <div class="col-md-4 col-sm-6">
-                                        <div class="premium-job-logo">
-                                            <a href="{{route('jobs_by_employer', $job->employer->company_slug)}}">
-                                                <img src="{{$job->employer->logo_url}}" class="img-fluid" />
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-8 col-sm-6">
-
-                                        <p class="job-title">
-                                            <a href="{{route('job_view', $job->job_slug)}}">{!! $job->job_title !!}</a>
-                                        </p>
-
-                                        <p class="text-muted m-0">
-                                            <a href="{{route('jobs_by_employer', $job->employer->company_slug)}}" class="text-muted">
-                                                {{$job->employer->company}}
-                                            </a>
-                                        </p>
-
-                                        <p class="text-muted m-0">
-                                            <i class="la la-map-marker"></i>
-                                            @if($job->city_name)
-                                                {!! $job->city_name !!},
-                                            @endif
-                                            @if($job->state_name)
-                                                {!! $job->state_name !!},
-                                            @endif
-                                            @if($job->state_name)
-                                                {!! $job->country_name !!}
-                                            @endif
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    @endforeach
-                </div>
-            </div>
-
-        </div>
-    @endif
-
-
-
     <div class="new-registration-page bg-white pb-5 pt-5">
         <div class="container">
             <div class="row">
@@ -140,7 +76,7 @@
                         <h4>@lang('app.job_seeker')</h4>
                         <p class="box-icon"><img src="{{asset('assets/images/employee.png')}}" /></p>
                         <p>@lang('app.job_seeker_new_desc')</p>
-                        <a href="{{route('register_job_seeker')}}" class="btn btn-success"><i class="la la-user-plus"></i> @lang('app.register_account') </a>
+                        <a href="{{route('register_job_seeker')}}" class="btn btn-primary"><i class="la la-user-plus"></i> @lang('app.register_account') </a>
                     </div>
                 </div>
 
@@ -149,7 +85,7 @@
                         <h4>@lang('app.employer')</h4>
                         <p class="box-icon"><img src="{{asset('assets/images/enterprise.png')}}" /></p>
                         <p>@lang('app.employer_new_desc')</p>
-                        <a href="{{route('register_employer')}}" class="btn btn-success"><i class="la la-user-plus"></i> @lang('app.register_account') </a>
+                        <a href="{{route('register_employer')}}" class="btn btn-primary"><i class="la la-user-plus"></i> @lang('app.register_account') </a>
                     </div>
                 </div>
 
@@ -158,7 +94,7 @@
                         <h4>@lang('app.agency')</h4>
                         <p class="box-icon"><img src="{{asset('assets/images/agent.png')}}" /></p>
                         <p>@lang('app.agency_new_desc')</p>
-                        <a href="{{route('register_agent')}}" class="btn btn-success"><i class="la la-user-plus"></i> @lang('app.register_account') </a>
+                        <a href="{{route('register_agent')}}" class="btn btn-primary"><i class="la la-user-plus"></i> @lang('app.register_account') </a>
                     </div>
                 </div>
             </div>
@@ -219,68 +155,8 @@
         </div>
     @endif
 
-    <div class="pricing-section bg-white pb-5 pt-5">
-        <div class="container">
 
-            <div class="row">
-                <div class="col-md-12">
-
-                    <div class="pricing-section-heading mb-5 text-center">
-
-                        <h1>Pricing</h1>
-                        <h5 class="text-muted">Choose a package to unlock Premium/Regular jobs posting ability.</h5>
-                        <h5 class="text-muted">To get a large amount of quality application, choose the premium package</h5>
-                    </div>
-
-                </div>
-            </div>
-
-
-            <div class="row">
-
-                <div class="col-xs-12 col-md-4">
-                    <div class="pricing-table-wrap bg-light pt-5 pb-5 text-center">
-                        <h1 class="display-4">$0</h1>
-                        <h3>Free</h3>
-
-                        <div class="pricing-package-ribbon pricing-package-ribbon-light">Regular</div>
-
-                        <p class="mb-2 text-muted"> No Premium Job Post</p>
-                        <p class="mb-2 text-muted"> Unlimited Regular Job Post</p>
-                        <p class="mb-2 text-muted"> Unlimited Applicants</p>
-                        <p class="mb-2 text-muted"> Dashboard access to manage application</p>
-                        <p class="mb-2 text-muted"> No support available</p>
-
-                        <a href="{{route('new_register')}}" class="btn btn-success mt-4"><i class="la la-user-plus"></i> Sign Up</a>
-                    </div>
-                </div>
-
-                @foreach($packages as $package)
-                    <div class="col-xs-12 col-md-4">
-                        <div class="pricing-table-wrap bg-light pt-5 pb-5 text-center">
-                            <h1 class="display-4">{!! get_amount($package->price) !!}</h1>
-                            <h3>{{$package->package_name}}</h3>
-                            <div class="pricing-package-ribbon pricing-package-ribbon-green">Premium</div>
-
-                            <p class="mb-2 text-muted"> {{$package->premium_job}} Premium Jobs Post</p>
-                            <p class="mb-2 text-muted"> Unlimited Regular Job Post</p>
-                            <p class="mb-2 text-muted"> Unlimited Applicants</p>
-                            <p class="mb-2 text-muted"> Dashboard access to manage application</p>
-                            <p class="mb-2 text-muted"> E-Mail support available</p>
-                            <a href="{{route('checkout', $package->id)}}" class="btn btn-success mt-4"> <i class="la la-shopping-cart"></i> Purchas Package</a>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-
-        </div>
-    </div>
-
-
-
-
-
-    <div class="home-blog-section pb-5 pt-5">
+    <div class="home-blog-section bg-white pb-5 pt-5">
         <div class="container">
 
             <div class="row">
@@ -311,7 +187,7 @@
 
                             <p class="blog-card-text-preview">{!! limit_words($post->post_content) !!}</p>
 
-                            <a href="{{route('blog_post_single', $post->slug)}}" class="btn btn-success"> <i class="la la-book"></i> Read More</a>
+                            <a href="{{route('blog_post_single', $post->slug)}}" class="btn btn-primary"> <i class="la la-book"></i> Baca lebih lanjut</a>
 
                             <div class="blog-card-footer border-top pt-3 mt-3">
                                 <span><i class="la la-user"></i> {{$post->author->name}} </span>
@@ -332,7 +208,7 @@
                 <div class="col-md-12">
                     <div class="home-all-blog-posts-btn-wrap text-center my-3">
 
-                        <a href="" class="btn btn-success btn-lg"><i class="la la-link"></i> @lang('app.all_blog_posts')</a>
+                        <a href="" class="btn btn-primary btn-lg"><i class="la la-link"></i> @lang('app.all_blog_posts')</a>
 
                     </div>
                 </div>
@@ -344,7 +220,7 @@
 
 
 
-    <div class="new-registration-page bg-white pb-5 pt-5">
+    <div class="new-registration-page pb-5 pt-5">
         <div class="container">
             <div class="row">
 
@@ -362,7 +238,7 @@
                         </div>
 
                         <div class="job-post-button my-auto">
-                            <a href="{{route('post_new_job')}}" class="btn btn-success btn-lg">Post a Job</a>
+                            <a href="{{route('post_new_job')}}" class="btn btn-primary btn-lg">Post a Job</a>
 
                         </div>
                     </div>
@@ -373,7 +249,7 @@
         </div>
     </div>
 
-    <div class="job-stats-footer pb-5 pt-5 text-center">
+    <div class="job-stats-footer bg-white pb-5 pt-5 text-center">
         <div class="container">
 
             <div class="row">

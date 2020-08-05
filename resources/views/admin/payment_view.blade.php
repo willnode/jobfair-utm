@@ -123,7 +123,7 @@
 
 
             @if($payment->status != 'success')
-                <a href="{{route('status_change', [$payment->id, 'success'] )}}" class="btn btn-success"><i class="fa fa-check-circle-o"></i> @lang('app.mark_as_success') </a>
+                <a href="{{route('status_change', [$payment->id, 'success'] )}}" class="btn btn-primary"><i class="fa fa-check-circle-o"></i> @lang('app.mark_as_success') </a>
             @endif
 
 

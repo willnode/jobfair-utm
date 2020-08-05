@@ -91,7 +91,7 @@ class Job extends Model
                 $html = '<span class="text-muted">'.trans('app.pending').'</span>';
                 break;
             case 1:
-                $html = '<span class="text-success">'.trans('app.published').'</span>';
+                $html = '<span class="text-primary">'.trans('app.published').'</span>';
                 break;
             case 2:
                 $html = '<span class="text-warning">'.trans('app.blocked').'</span>';

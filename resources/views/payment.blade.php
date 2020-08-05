@@ -17,7 +17,7 @@
                 <div class="col-md-8 offset-md-2">
 
                     @if($payment->payment_method === 'paypal')
-                        <h3 class="text-success">{!! get_amount($payment->amount) !!}</h3>
+                        <h3 class="text-primary">{!! get_amount($payment->amount) !!}</h3>
                         <form action="{{route('payment_paypal_pay', $payment->local_transaction_id)}}" method="post">
                             @csrf
 
@@ -26,7 +26,7 @@
                             <input type="hidden" name="lc" value="UK" />
                             <input type="hidden" name="currency_code" value="{{get_option('currency_sign')}}" />
                             <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynow_LG.gif:NonHostedGuest" />
-                            <button type="submit" class="btn btn-success btn-lg"> <i class="la la-paypal"></i> @lang('app.pay_with_paypal')</button>
+                            <button type="submit" class="btn btn-primary btn-lg"> <i class="la la-paypal"></i> @lang('app.pay_with_paypal')</button>
                         </form>
                     @endif
 

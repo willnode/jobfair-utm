@@ -57,7 +57,7 @@ $user = Auth::user();
                     <ul class="navbar-nav ml-auto">
 
                         <li class="nav-item">
-                            <a class="nav-link btn btn-success text-white" href="{{route('post_new_job')}}"><i class="la la-save"></i>{{__('app.post_new_job')}} </a>
+                            <a class="nav-link btn btn-primary text-white" href="{{route('post_new_job')}}"><i class="la la-save"></i>{{__('app.post_new_job')}} </a>
                         </li>
 
                         <li class="nav-item dropdown">

@@ -51,7 +51,7 @@
                     <label for="state" class="col-md-4 control-label">{{ __('app.state') }} </label>
                     <div class="col-md-8">
                         <select name="state" class="form-control {{e_form_invalid_class('state', $errors)}} state_options">
-                            <option value="">Select a state</option>
+                            <option value="">Pilih Provinsi</option>
 
                             @if($old_country)
                                 @foreach($old_country->states as $state)

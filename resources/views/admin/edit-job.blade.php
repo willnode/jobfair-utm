@@ -127,7 +127,6 @@
                             <option value="any" {{selected('any', $job->gender)}}>@lang('app.any')</option>
                             <option value="male" {{selected('male', $job->gender)}}>@lang('app.male')</option>
                             <option value="female" {{selected('female', $job->gender)}}>@lang('app.female')</option>
-                            <option value="transgender" {{selected('transgender', $job->gender)}}>@lang('app.transgender')</option>
                         </select>
 
                         {!! e_form_error('gender', $errors) !!}
@@ -296,7 +295,7 @@
                     <label for="state" class="col-md-4 control-label">{{ __('app.state') }} </label>
                     <div class="col-md-8">
                         <select name="state" class="form-control {{e_form_invalid_class('state', $errors)}} state_options">
-                            <option value="">Select a state</option>
+                            <option value="">Pilih Provinsi</option>
 
                             @if($old_country)
                                 @foreach($old_country->states as $state)

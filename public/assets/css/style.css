@@ -1,9 +1,9 @@
 @import url('../line-awesome/css/line-awesome.min.css');
 a{
-    color: #38c172;
+    color: #388ac1;
 }
 a:hover{
-    color: #2fa360;
+    color: #2f88a3;
     text-decoration: none;
 }
 .navbar-laravel{
@@ -28,26 +28,25 @@ Home Page
     padding: 0;
 }
 .navbar-brand img{
-    max-height: 25px;
+    max-height: 35px;
     width: auto;
 }
 .home-hero-section{
-    background: #f6fff5 url("../images/hero-image.png")  no-repeat scroll right 100px center ;
+    background: #005b99 url("../images/hero-image.png")  no-repeat scroll right 100px center ;
     background-size: contain;
-    /*color: #0baf00;*/
-    color: #5a5a5a;
+    color: #eee;
     min-height: 400px;
     padding-top: 100px;
     margin-top: -80px;
     position: relative;
-    border: 20px solid #f6fff5;
+    border: 20px solid #005b99;
 }
 .home-hero-section:before{
-    background-color: #f6fff5;
+    background-color: #005b99;
     content: "";
     height: 100%;
     left: 0;
-    opacity: 0.9;
+    opacity: 0.3;
     position: absolute;
     top: 0;
     width: 100%;
@@ -110,21 +109,21 @@ a.category-link:hover {
     color: #e3342f;
 }
 .job-stats-footer h3{
-    color: #2fa360;
+    color: #2f7ea3;
 }
 .blog-card-text-preview, .blog-card-footer{
     color: #878787;
 }
 
 .blog-listing-header{
-    background: #089626  url("../images/blog-banner.jpg")  no-repeat fixed  center;
+    background: #084a96  url("../images/blog-banner.jpg")  no-repeat fixed  center;
     background-size: cover;
     padding: 5rem 0;
     color: #ffffff;
     position: relative;
 }
 .blog-listing-header:before{
-    background-color: #089626;
+    background-color: #086996;
     content: "";
     height: 100%;
     left: 0;

@@ -33,7 +33,7 @@
                                     <a href="{{route('user_status', [$user->id, 'block'])}}" class="btn btn-danger btn-sm" data-toggle="tooltip" title="@lang('app.block')"><i class="la la-ban"></i> </a>
 
                                 @elseif($user->active_status == 2)
-                                    <a href="{{route('user_status', [$user->id, 'approve'])}}" class="btn btn-success btn-sm" data-toggle="tooltip" title="@lang('app.approve')"><i class="la la-check-circle-o"></i> </a>
+                                    <a href="{{route('user_status', [$user->id, 'approve'])}}" class="btn btn-primary btn-sm" data-toggle="tooltip" title="@lang('app.approve')"><i class="la la-check-circle-o"></i> </a>
                                 @endif
 
                                 <a href="{{route('users_edit', $user->id)}}" class="btn btn-info btn-sm"><i class="la la-pencil"></i> </a>

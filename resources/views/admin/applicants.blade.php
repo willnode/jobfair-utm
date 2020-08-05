@@ -35,7 +35,7 @@
                             </td>
                             <td>
                                 @if( ! $application->is_shortlisted)
-                                    <a href="{{route('make_short_list', $application->id)}}" class="btn btn-success"><i class="la la-user-plus"></i> @lang('app.shortlist') </a>
+                                    <a href="{{route('make_short_list', $application->id)}}" class="btn btn-primary"><i class="la la-user-plus"></i> @lang('app.shortlist') </a>
                                 @else
                                     @lang('app.shortlisted')
                                 @endif

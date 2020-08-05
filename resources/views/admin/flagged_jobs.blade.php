@@ -30,7 +30,7 @@
                             </p>
 
                             @if($flag->job->status != 1)
-                                <a href="{{route('job_status_change', [$flag->job->id, 'approve'])}}" class="btn btn-success btn-sm" data-toggle="tooltip" title="@lang('app.approve')"><i class="la la-check-circle-o"></i> </a>
+                                <a href="{{route('job_status_change', [$flag->job->id, 'approve'])}}" class="btn btn-primary btn-sm" data-toggle="tooltip" title="@lang('app.approve')"><i class="la la-check-circle-o"></i> </a>
                             @endif
 
                             @if($flag->job->status != 2)

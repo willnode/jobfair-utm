@@ -35,7 +35,7 @@
                         <p class="mb-2 text-muted"> Dashboard access to manage application</p>
                         <p class="mb-2 text-muted"> No support available</p>
 
-                        <a href="{{route('new_register')}}" class="btn btn-success mt-4"><i class="la la-user-plus"></i> Sign Up</a>
+                        <a href="{{route('new_register')}}" class="btn btn-primary mt-4"><i class="la la-user-plus"></i> Sign Up</a>
                     </div>
                 </div>
 
@@ -51,7 +51,7 @@
                             <p class="mb-2 text-muted"> Unlimited Applicants</p>
                             <p class="mb-2 text-muted"> Dashboard access to manage application</p>
                             <p class="mb-2 text-muted"> E-Mail support available</p>
-                            <a href="{{route('checkout', $package->id)}}" class="btn btn-success mt-4"> <i class="la la-shopping-cart"></i> Purchas Package</a>
+                            <a href="{{route('checkout', $package->id)}}" class="btn btn-primary mt-4"> <i class="la la-shopping-cart"></i> Purchas Package</a>
                         </div>
                     </div>
                 @endforeach

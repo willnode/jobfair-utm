@@ -21,7 +21,7 @@
 
             <div class="row">
                 <div class="col-md-8">
-                    <h1 class="text-success">{!! $job->job_title !!}</h1>
+                    <h1 class="text-primary">{!! $job->job_title !!}</h1>
                     <p class="text-muted">
                         <i class="la la-briefcase"></i> @lang('app.'.$job->job_type)
 
@@ -40,13 +40,13 @@
                     </p>
 
                     <p>
-                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#applyJobModal" ><i class="la la-calendar-plus-o"></i> @lang('app.apply_online') </button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#applyJobModal" ><i class="la la-calendar-plus-o"></i> @lang('app.apply_online') </button>
 
                         @if($job->employer->followable)
                             @if(auth()->check() && auth()->user()->isEmployerFollowed($job->employer->id))
-                                <button type="button" class="btn btn-success employer-follow-button" data-employer-id="{{$job->employer->id}}"><i class="la la-minus-circle"></i> @lang('app.unfollow') {{$employer->company}} </button>
+                                <button type="button" class="btn btn-primary employer-follow-button" data-employer-id="{{$job->employer->id}}"><i class="la la-minus-circle"></i> @lang('app.unfollow') {{$employer->company}} </button>
                             @else
-                                <button type="button" class="btn btn-success employer-follow-button" data-employer-id="{{$job->employer->id}}"><i class="la la-plus-circle"></i> @lang('app.follow') {{$employer->company}} </button>
+                                <button type="button" class="btn btn-primary employer-follow-button" data-employer-id="{{$job->employer->id}}"><i class="la la-plus-circle"></i> @lang('app.follow') {{$employer->company}} </button>
                             @endif
                         @endif
 
@@ -102,7 +102,7 @@
 
                 <div class="job-view-container box-shadow bg-white p-4 mb-4">
 
-                    <h4 class="text-success">{!! $job->job_title !!}</h4>
+                    <h4 class="text-primary">{!! $job->job_title !!}</h4>
 
                     <p class="text-muted">
                         <i class="la la-briefcase"></i> @lang('app.'.$job->job_type)
@@ -286,7 +286,7 @@
                     <p><i class="la la-tag"></i> @lang('app.job_id') : {{$job->job_id}}</p>
 
                     <p>
-                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#applyJobModal"><i class="la la-calendar-plus-o"></i> @lang('app.apply_online') </button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#applyJobModal"><i class="la la-calendar-plus-o"></i> @lang('app.apply_online') </button>
                     </p>
 
                 </div>
@@ -340,9 +340,9 @@
                     <p>
                         @if($job->employer->followable)
                             @if(auth()->check() && auth()->user()->isEmployerFollowed($job->employer->id))
-                                <button type="button" class="btn btn-success employer-follow-button" data-employer-id="{{$job->employer->id}}"><i class="la la-minus-circle"></i> @lang('app.unfollow') {{$employer->company}} </button>
+                                <button type="button" class="btn btn-primary employer-follow-button" data-employer-id="{{$job->employer->id}}"><i class="la la-minus-circle"></i> @lang('app.unfollow') {{$employer->company}} </button>
                             @else
-                                <button type="button" class="btn btn-success employer-follow-button" data-employer-id="{{$job->employer->id}}"><i class="la la-plus-circle"></i> @lang('app.follow') {{$employer->company}} </button>
+                                <button type="button" class="btn btn-primary employer-follow-button" data-employer-id="{{$job->employer->id}}"><i class="la la-plus-circle"></i> @lang('app.follow') {{$employer->company}} </button>
                             @endif
                         @endif
                     </p>
@@ -488,7 +488,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">@lang('app.close')</button>
-                        <button type="submit" class="btn btn-success"><i class="la la-flag-o"></i> @lang('app.flag_this_job')</button>
+                        <button type="submit" class="btn btn-primary"><i class="la la-flag-o"></i> @lang('app.flag_this_job')</button>
                     </div>
                 </form>
 

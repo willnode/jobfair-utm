@@ -11,7 +11,7 @@ class LocationController extends Controller
         $states = State::whereCountryId($request->country_id)->get();
 
         //Get the states from country
-        $option = "<option value=''>Select a state</option>";
+        $option = "<option value=''>Pilih Provinsi</option>";
         if ($states->count()){
             foreach ($states as $state){
                 $option .= "<option value='{$state->id}'>{$state->state_name}</option>";

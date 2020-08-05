@@ -35,7 +35,7 @@
 
                 <div class="form-group row">
                     <div class="offset-md-3 col-md-9">
-                        <button type="submit" class="btn btn-success">@lang('app.change_password')</button>
+                        <button type="submit" class="btn btn-primary">@lang('app.change_password')</button>
                     </div>
                 </div>
             </form>
