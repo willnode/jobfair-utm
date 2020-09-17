@@ -9,7 +9,7 @@ return [
     |
     |
     */
-    
+
     'home'                              => 'Beranda',
     'go_to_home'                        => 'Ke Beranda',
     'view_site'                         => 'Lihat website',
@@ -47,12 +47,12 @@ return [
     'company_register'                  => 'Daftar sebagai Instansi',
     'company'                           => 'Instansi',
     'address'                           => 'Alamat',
-    'address_2'                         => 'Alamt (baris ke-2)',
+    'address_2'                         => 'Alamat (baris ke-2)',
     'country'                           => 'Negara',
     'state'                             => 'Provinsi',
     'city'                              => 'Kota',
     'phone'                             => 'Nomor HP',
-    'select_a_country'                  => 'Pilih negara',
+    'select_a_country'                  => 'Pilih Negara',
     'agent_register'                    => 'Daftar sebagai Agen',
     'search'                            => 'Cari',
     'job_title_placeholder'             => 'Judul pekerjaan atau nama instansi',
@@ -244,7 +244,7 @@ return [
     'salary_upto'                       => 'Pendapatan hingga',
     'salary_upto_desc'                  => 'Untuk menampilkan rentang pendapatan, tulis pendapatan tertinggi disini',
     'salary_currency'                   => 'Mata uang pendapatan',
-    'vacancy'                           => 'Vacancy',
+    'vacancy'                           => 'Jumlah Lowongan',
     'gender'                            => 'Gender',
     'any'                               => 'Apapun',
     'male'                              => 'Laki-Laki',
@@ -295,7 +295,7 @@ return [
     'something_went_wrong'              => 'Ada suatu kesalahan, mohon coba lagi nanti',
     'employer_profile'                  => 'Profil Perusahaan',
     'update_employer_profile'           => 'Update Profil Perusahaan',
-    
+
     '1-10'                              => '1-10',
     '11-50'                             => '11-50',
     '51-200'                            => '51-200',

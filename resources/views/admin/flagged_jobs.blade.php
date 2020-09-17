@@ -38,13 +38,15 @@
                             @endif
 
                             <a href="{{route('job_status_change', [$flag->job->id, 'delete'])}}" class="btn btn-danger btn-sm" data-toggle="tooltip" title="@lang('app.delete')"><i class="la la-trash-o"></i> </a>
-                            
-                            
+
+
                         </td>
                     </tr>
                 @endforeach
 
             </table>
+
+            <a href="{{route('flagged_jobs_clear')}}"><i class="la la-check-circle-o"></i> Reset semua tanda</a>
 
 
             {!! $flagged->links() !!}

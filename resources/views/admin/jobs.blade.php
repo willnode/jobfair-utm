@@ -25,7 +25,7 @@
                             <td>
                                 {!! $job->status_context() !!}
                                 @if($job->is_premium)
-                                    <p class="alert alert-success" data-toggle="tooltip" title="@lang('app.premium')"><i class="la la-bookmark-o"></i>@lang('app.premium')</p>
+                                    <!-- <p class="alert alert-success" data-toggle="tooltip" title="@lang('app.premium')"><i class="la la-bookmark-o"></i>@lang('app.premium')</p> -->
                                 @endif
                             </td>
                             <td>{{$job->employer->company}}</td>
@@ -34,7 +34,7 @@
                                 <a href="{{route('edit_job', $job->id)}}" class="btn btn-secondary btn-sm"><i class="la la-edit" data-toggle="tooltip" title="@lang('app.edit')"></i> </a>
 
                                 @if(!$job->is_premium)
-                                    <a href="{{route('job_status_change', [$job->id, 'premium'])}}" class="btn btn-primary btn-sm" data-toggle="tooltip" title="@lang('app.mark_premium')"><i class="la la-bookmark-o"></i> </a>
+                                    <!-- <a href="{{route('job_status_change', [$job->id, 'premium'])}}" class="btn btn-primary btn-sm" data-toggle="tooltip" title="@lang('app.mark_premium')"><i class="la la-bookmark-o"></i> </a> -->
                                 @endif
 
                                 @if(auth()->user()->is_admin())

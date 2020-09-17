@@ -263,6 +263,10 @@ class JobController extends Controller
         return view('admin.flagged_jobs', compact('title', 'flagged'));
     }
 
+    public function flaggedMessageClear(){
+        FlagJob::truncate();
+        return redirect()->back();
+    }
 
     /**
      * @param $job_id

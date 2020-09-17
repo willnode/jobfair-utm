@@ -85,10 +85,6 @@
                         <th>@lang('app.about_company')</th>
                         <td>{{ $user->about_company }}</td>
                     </tr>
-                    <tr>
-                        <th>@lang('app.premium_jobs_balance')</th>
-                        <td>{{ $user->premium_jobs_balance }}</td>
-                    </tr>
                 </table>
             @endif
 

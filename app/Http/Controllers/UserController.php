@@ -48,10 +48,11 @@ class UserController extends Controller
             if ($status == 'approve'){
                 $user->active_status = 1;
                 $user->save();
-
             }elseif($status == 'block'){
                 $user->active_status = 2;
                 $user->save();
+            }elseif($status == 'delete'){
+                $user->delete();
             }
         }
         return back()->with('success', trans('app.status_updated'));
@@ -295,6 +296,13 @@ class UserController extends Controller
     public function makeShortList($application_id){
         $applicant = JobApplication::find($application_id);
         $applicant->is_shortlisted = 1;
+        $applicant->save();
+        return back()->with('success', __('app.success'));
+    }
+
+    public function unmakeShortList($application_id){
+        $applicant = JobApplication::find($application_id);
+        $applicant->is_shortlisted = 0;
         $applicant->save();
         return back()->with('success', __('app.success'));
     }

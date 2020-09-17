@@ -100,12 +100,16 @@ $user = Auth::user();
                                 </a>
                             </li>
 
+                            @if( $user->is_user())
+
                             <li class="{{request()->is('dashboard/u/applied-jobs*')? 'active' : ''}}">
                                 <a href="{{route('applied_jobs')}}" class="list-group-item-action active">
                                     <span class="sidebar-icon"><i class="la la-list-alt"></i> </span>
                                     <span class="title">@lang('app.applied_jobs')</span>
                                 </a>
                             </li>
+
+                            @endif
 
                             @if($user->is_admin())
 
@@ -242,7 +246,7 @@ $user = Auth::user();
                 <div class="col-md-9">
                     <div class="main-page pr-4">
 
-                        <div class="main-page-title mt-3 mb-3 d-flex">
+                        <div class="main-page-title ml-3 mt-3 mb-3 d-flex">
                             <h3 class="flex-grow-1">{!! ! empty($title) ? $title : __('app.dashboard') !!}</h3>
 
                             <div class="action-btn-group">@yield('title_action_btn_gorup')</div>

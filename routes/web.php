@@ -93,6 +93,7 @@ Route::group(['prefix'=>'dashboard', 'middleware' => 'dashboard'], function(){
             Route::get('applicant', 'UserController@employerApplicant')->name('employer_applicant');
             Route::get('shortlisted', 'UserController@shortlistedApplicant')->name('shortlisted_applicant');
             Route::get('applicant/{application_id}/shortlist', 'UserController@makeShortList')->name('make_short_list');
+            Route::get('applicant/{application_id}/unshortlist', 'UserController@unmakeShortList')->name('unmake_short_list');
 
             Route::get('profile', 'UserController@employerProfile')->name('employer_profile');
             Route::post('profile', 'UserController@employerProfilePost');
@@ -109,6 +110,7 @@ Route::group(['prefix'=>'dashboard', 'middleware' => 'dashboard'], function(){
 
 
         Route::get('flagged', 'JobController@flaggedMessage')->name('flagged_jobs');
+        Route::get('flagged_clear', 'JobController@flaggedMessageClear')->name('flagged_jobs_clear');
 
 
         Route::group(['prefix'=>'cms'], function(){

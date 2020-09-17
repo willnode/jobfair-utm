@@ -29,10 +29,9 @@
                     <label for="gender" class="col-sm-4 control-label">@lang('app.gender')</label>
                     <div class="col-sm-8">
                         <select id="gender" name="gender" class="form-control select2">
-                            <option value="">Select Gender</option>
-                            <option value="male" {{ $user->gender == 'male'?'selected':'' }}>Male</option>
-                            <option value="female" {{ $user->gender == 'female'?'selected':'' }}>Fe-Male</option>
-                            <option value="third_gender" {{ $user->gender == 'third_gender'?'selected':'' }}>Third Gender</option>
+                            <option value="">Pilih Gender</option>
+                            <option value="male" {{ $user->gender == 'male'?'selected':'' }}>Laki-Laki</option>
+                            <option value="female" {{ $user->gender == 'female'?'selected':'' }}>Perempuan</option>
                         </select>
                         {!! e_form_error('gender', $errors) !!}
                     </div>

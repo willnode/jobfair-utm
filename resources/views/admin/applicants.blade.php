@@ -18,8 +18,9 @@
                             <td>
                                 <i class="la la-user"></i> {{$application->name}}
                                 <p class="text-muted"><i class="la la-clock-o"></i> {{$application->created_at->format(get_option('date_format'))}} {{$application->created_at->format(get_option('time_format'))}}</p>
-                                <p class="text-muted"><i class="la la-envelope-o"></i> {{$application->email}}</p>
-                                <p class="text-muted"><i class="la la-phone-square"></i> {{$application->phone_number}}</p>
+                                <p class="text-muted"><i class="la la-envelope-o"></i> {{$application->email}}
+                                <br><i class="la la-phone-square"></i> {{$application->phone_number}}</p>
+                                <p class="text-muted"><i class="la la-info"></i> {{$application->message}}</p>
                             </td>
 
                             <td>
@@ -34,10 +35,11 @@
                                 @endif
                             </td>
                             <td>
+                                <a href="{{$application->getResumeUrlAttribute()}}" download class="btn btn-success"><i class="la la-download"></i> CV</a>
                                 @if( ! $application->is_shortlisted)
                                     <a href="{{route('make_short_list', $application->id)}}" class="btn btn-primary"><i class="la la-user-plus"></i> @lang('app.shortlist') </a>
                                 @else
-                                    @lang('app.shortlisted')
+                                    @lang('app.shortlisted'). <a href="{{route('unmake_short_list', $application->id)}}">Batalkan</a>
                                 @endif
                             </td>
 
